@@ -5,25 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clãs</title>
 
-    <link rel="aparencia" href="aparencia.css">
+    <!-- era rel="aparencia", que não é um valor válido de rel — por isso o CSS nunca carregava -->
+    <link rel="stylesheet" href="aparencia.css">
 </head>
 
 <body>
-    <a href="mapa_geral.html">
-    <button>
-        <span class="button_top">Voltar</span>
-    </button>
 
-    </a>
+    <header>
+        <a href="mapa_geral.html">
+            <button>
+                <span class="button_top">Voltar</span>
+            </button>
+        </a>
+    </header>
 
-    <p style="text-align: center;"> Geralmente os espiritos heroico de avalon le fae são compostos por fadas
-        de diferentes clãs sendo Wind, mirror, earth, fang etc.
-    </p>
+    <main>
+        <section>
+            <h2>Clãs</h2>
+            <p style="text-align: center;"> Geralmente os espiritos heroico de avalon le fae são compostos por fadas
+                de diferentes clãs sendo Wind, mirror, earth, fang etc.
+            </p>
 
-    <button>
+            <button>
+                <span class="button_top"> Wind </span>
+            </button>
+        </section>
+    </main>
 
-        <span  class="button_top"> Wind </span>    
-        
-   </button>
 </body>
 </html>
