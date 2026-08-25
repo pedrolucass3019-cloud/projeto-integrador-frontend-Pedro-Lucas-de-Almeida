@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="symbollb6.png">
-  <link rel="stylesheet" href="css/aparencia.css">
 
   <style>
     * { box-sizing: border-box; }
@@ -46,19 +45,40 @@
       border: 1px solid rgba(255,255,255,.6); border-radius: 6px;
       background: rgba(20,10,30,.55); transition: box-shadow .2s;
     }
-    .botao-nav:hover, .botao-nav:focus { box-shadow: 0 0 10px rgba(216,164,255,.6); outline: none; }
+    .botao-nav:hover, .botao-nav:focus-visible { box-shadow: 0 0 10px rgba(216,164,255,.6); outline: 2px solid #d8a4ff; outline-offset: 2px; }
 
     ul, table { color: #f5f5f5; }
     table { border-collapse: collapse; margin: 20px auto; }
     th, td { border: 1px solid #f5f5f5; padding: 8px; }
+    caption { color: #f5f5f5; font-style: italic; margin-bottom: 8px; }
+
+    figure { text-align: center; margin: 20px auto; }
+    figcaption { color: #f5f5f5; font-size: 13px; font-style: italic; margin-top: 6px; }
+    img { max-width: 100%; height: auto; border-radius: 6px; }
 
     form { max-width: 600px; margin: 20px auto; }
-    fieldset { padding: 20px; border: 1px solid rgba(255,255,255,.6); border-radius: 8px; background: rgba(20,10,30,.55); box-shadow: 0 0 15px rgba(0,0,0,.4); }
+    fieldset { padding: 20px; border: 1px solid rgba(255,255,255,.6); border-radius: 8px; background: rgba(20,10,30,.55); box-shadow: 0 0 15px rgba(0,0,0,.4); margin-bottom: 20px; }
     legend { color: #f5f5f5; font-family: 'MedievalSharp', cursive; font-size: 1.3rem; padding: 0 10px; }
     label { display: block; color: #f5f5f5; margin-top: 12px; }
     input, select, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #aaa; border-radius: 4px; font-family: 'Cinzel', serif; }
-    input:focus, select:focus, textarea:focus { outline: none; border-color: #d8a4ff; box-shadow: 0 0 8px rgba(216,164,255,.5); }
+    input:focus-visible, select:focus-visible, textarea:focus-visible { outline: none; border-color: #d8a4ff; box-shadow: 0 0 8px rgba(216,164,255,.5); }
+    .campo-radio { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+    .campo-radio label { display: inline; margin: 0; }
+    .campo-radio input { width: auto; margin-top: 0; }
     .botao-formulario { margin-top: 15px; padding: 10px 25px; cursor: pointer; font-family: 'Cinzel', serif; font-weight: bold; }
+
+    .aviso {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 12px 16px; border: 1px solid rgba(255,255,255,.6); border-radius: 8px;
+      background: rgba(20,10,30,.55); margin-bottom: 20px;
+    }
+    .aviso p { margin: 0; text-align: left; font-size: 14px; }
+    .botao-fechar {
+      background: transparent; border: 1px solid rgba(255,255,255,.6); color: #f5f5f5;
+      border-radius: 4px; width: 28px; height: 28px; cursor: pointer; font-size: 16px; line-height: 1;
+    }
+    .botao-fechar:hover, .botao-fechar:focus-visible { box-shadow: 0 0 8px rgba(216,164,255,.6); }
+    .oculto { display: none; }
 
     footer { text-align: center; }
 
@@ -67,6 +87,10 @@
     .fade-in-1 { animation-delay: .1s; } .fade-in-2 { animation-delay: .4s; }
     .fade-in-3 { animation-delay: .7s; } .fade-in-3b { animation-delay: .9s; } .fade-in-3c { animation-delay: 1.1s; }
     .fade-in-4 { animation-delay: 1.4s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .overlay-entardecer, .fade-in { animation: none; opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -81,10 +105,10 @@
 
     <main>
 
-      <section>
-        <h2>Explorar Avalon Le Fae</h2>
+      <section aria-labelledby="titulo-explorar">
+        <h2 id="titulo-explorar">Explorar Avalon Le Fae</h2>
         <div class="area-nav">
-          <nav>
+          <nav aria-label="Navegação principal">
             <a class="botao-nav fade-in fade-in-3" href="regioes.html">Regiões</a>
             <a class="botao-nav fade-in fade-in-3b" href="servos.html">Personagens</a>
             <a class="botao-nav fade-in fade-in-3c" href="story.html">História</a>
@@ -92,8 +116,8 @@
         </div>
       </section>
 
-      <section>
-        <h2>Sobre o projeto</h2>
+      <section aria-labelledby="titulo-sobre">
+        <h2 id="titulo-sobre">Sobre o projeto</h2>
         <p class="fade-in fade-in-4">
           Avalon le Fae é o sexto Lostbelt do jogo Fate/Grand Order, ambientado em uma Bretanha
           Feérica que se desviou da linha do tempo principal durante a Era Celta. A narrativa segue
@@ -102,26 +126,40 @@
         </p>
       </section>
 
-      <section>
-        <h2>Informações de Avalon</h2>
+      <section aria-labelledby="titulo-info">
+        <h2 id="titulo-info">Informações de Avalon</h2>
         <ul>
           <li>Regiões da Bretanha Feérica</li>
           <li>Clãs de fadas</li>
           <li>Personagens e Servos</li>
         </ul>
         <table>
-          <thead><tr><th>Elemento</th><th>Informação</th></tr></thead>
+          <caption>Dados básicos do Lostbelt</caption>
+          <thead>
+            <tr><th scope="col">Elemento</th><th scope="col">Informação</th></tr>
+          </thead>
           <tbody>
             <tr><td>Lostbelt</td><td>6</td></tr>
             <tr><td>Local</td><td>Bretanha Feérica</td></tr>
           </tbody>
         </table>
-        <p><a href="https://fate-go.us/" target="_blank" rel="noopener noreferrer">Fonte oficial de Fate/Grand Order</a></p>
-        <img src="assets/images/mapa-avalon.png" alt="Mapa de Avalon Le Fae">
+        <p>
+          <a href="https://fate-go.us/" target="_blank" rel="noopener noreferrer">Fonte oficial de Fate/Grand Order</a>
+        </p>
+        <figure>
+          <img src="assets/images/mapa-avalon.png" alt="Mapa ilustrado das regiões de Avalon Le Fae, mostrando Salisbury, Londinium, Orkney e Cornwall">
+          <figcaption>Mapa das principais regiões da Bretanha Feérica</figcaption>
+        </figure>
       </section>
 
-      <section>
-        <h2>Formulário</h2>
+      <section aria-labelledby="titulo-formulario">
+        <h2 id="titulo-formulario">Formulário</h2>
+
+        <div class="aviso" id="aviso-formulario">
+          <p>Sua opinião ajuda a melhorar este guia não oficial.</p>
+          <button type="button" class="botao-fechar" aria-label="Fechar aviso" onclick="document.getElementById('aviso-formulario').classList.add('oculto')">×</button>
+        </div>
+
         <form action="#" method="post">
           <fieldset>
             <legend>Opinião sobre Avalon Le Fae</legend>
@@ -139,11 +177,27 @@
               <option value="londinium">Londinium</option>
               <option value="orkney">Orkney</option>
               <option value="cornwall">Cornwall</option>
-              <option value="Norwich">Norwich</option>
+              <option value="norwich">Norwich</option>
             </select>
 
             <label for="nota">Nota para Avalon:</label>
             <input type="number" id="nota" name="nota" min="0" max="10" required placeholder="Dê uma nota de 0 a 10">
+
+            <fieldset>
+              <legend>Recomendaria este guia a outro fã?</legend>
+              <div class="campo-radio">
+                <input type="radio" id="recomenda-sim" name="recomendacao" value="sim" checked>
+                <label for="recomenda-sim">Sim</label>
+              </div>
+              <div class="campo-radio">
+                <input type="radio" id="recomenda-talvez" name="recomendacao" value="talvez">
+                <label for="recomenda-talvez">Talvez</label>
+              </div>
+              <div class="campo-radio">
+                <input type="radio" id="recomenda-nao" name="recomendacao" value="nao">
+                <label for="recomenda-nao">Não</label>
+              </div>
+            </fieldset>
 
             <label for="comentario">Comentário:</label>
             <textarea id="comentario" name="comentario" rows="5" placeholder="Escreva sua opinião sobre Avalon Le Fae"></textarea>
