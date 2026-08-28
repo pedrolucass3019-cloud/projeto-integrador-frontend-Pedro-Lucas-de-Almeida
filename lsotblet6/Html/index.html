@@ -37,6 +37,13 @@
     main > section > p { font-size: 15px; font-style: italic; max-width: 700px; margin: 0 auto; text-align: center; }
     section { margin: 30px auto; max-width: 800px; }
 
+    /* Novo: quadro escuro semi-transparente para o texto "Sobre o projeto" */
+    .texto-com-fundo {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 16px 20px;
+      border-radius: 8px;
+    }
+
     .area-nav { display: flex; align-items: center; justify-content: center; margin: 40px 0; }
     nav { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
     .botao-nav {
@@ -118,7 +125,7 @@
 
       <section aria-labelledby="titulo-sobre">
         <h2 id="titulo-sobre">Sobre o projeto</h2>
-        <p class="fade-in fade-in-4">
+        <p class="texto-com-fundo fade-in fade-in-4">
           Avalon le Fae é o sexto Lostbelt do jogo Fate/Grand Order, ambientado em uma Bretanha
           Feérica que se desviou da linha do tempo principal durante a Era Celta. A narrativa segue
           Mash e Fujimaru ao tentarem corrigir essa história distorcida, onde os fadas governam a
