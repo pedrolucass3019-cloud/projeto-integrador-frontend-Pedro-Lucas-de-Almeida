@@ -1,0 +1,352 @@
+:root {
+  --cor-texto-claro: #f5f5f5;
+  --cor-destaque: #d8a4ff;
+  --cor-painel-escuro: rgba(20, 10, 30, 0.55);
+  --espacamento-padrao: 20px;
+  --raio-borda-padrao: 8px;
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background: url("../albion_waifu2x_art_noise2.png") center/cover fixed no-repeat;
+}
+
+h1,
+h2,
+p,
+.texto-glow {
+  color: var(--cor-texto-claro);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5), 0 0 8px rgba(255, 255, 255, 0.25);
+}
+
+.titulo-medieval,
+h1 {
+  font-family: 'MedievalSharp', cursive;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.6rem;
+}
+
+.subtitulo {
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+body.pagina-historia {
+  background-image: url("../back121300.png");
+}
+
+#titulo-principal {
+  margin-bottom: 4px;
+}
+
+.conteudo {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: var(--espacamento-padrao) 0;
+}
+
+main {
+  margin-top: auto;
+  padding: 0 var(--espacamento-padrao) 40px;
+}
+
+main > section > p {
+  font-size: 0.95rem;
+  font-style: italic;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section {
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+
+.texto-com-fundo {
+  background: var(--cor-painel-escuro);
+  padding: var(--espacamento-padrao);
+  border-radius: var(--raio-borda-padrao);
+  width: 700px;
+  max-width: 100%;
+  margin: 30px auto;
+}
+
+.area-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+
+nav > .botao-nav {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--cor-texto-claro);
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  background: var(--cor-painel-escuro);
+  transition: box-shadow 0.2s;
+}
+
+.botao-nav:hover,
+.botao-nav:focus-visible {
+  box-shadow: 0 0 10px rgba(216, 164, 255, 0.6);
+  outline: 2px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+
+a:link {
+  color: var(--cor-texto-claro);
+}
+
+a:visited {
+  color: #cbb3e0;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--cor-destaque);
+  text-shadow: 0 0 6px var(--cor-destaque);
+}
+
+a:active {
+  color: #ffffff;
+}
+
+
+ul {
+  color: var(--cor-texto-claro);
+  list-style-type: "⚜ ";
+  padding-left: 1.5rem;
+  font-size: 1rem;
+}
+
+table {
+  color: var(--cor-texto-claro);
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  border: 1px solid var(--cor-texto-claro);
+  padding: 0.5rem;
+}
+
+caption {
+  color: var(--cor-texto-claro);
+  font-style: italic;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+figure {
+  text-align: center;
+  margin: 20px auto;
+}
+
+figcaption {
+  color: var(--cor-texto-claro);
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+fieldset {
+  padding: var(--espacamento-padrao);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--raio-borda-padrao);
+  background: var(--cor-painel-escuro);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  margin-bottom: var(--espacamento-padrao);
+}
+
+legend {
+  color: var(--cor-texto-claro);
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.3rem;
+  padding: 0 10px;
+}
+
+label {
+  display: block;
+  color: var(--cor-texto-claro);
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: var(--cor-destaque);
+  box-shadow: 0 0 8px rgba(216, 164, 255, 0.5);
+}
+
+.campo-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.campo-radio label {
+  display: inline;
+  margin: 0;
+}
+
+.campo-radio input {
+  width: auto;
+  margin-top: 0;
+}
+
+.botao-formulario {
+  margin-top: 15px;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.aviso {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--raio-borda-padrao);
+  background: var(--cor-painel-escuro);
+  margin-bottom: var(--espacamento-padrao);
+}
+
+.aviso p {
+  margin: 0;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.botao-fechar {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: var(--cor-texto-claro);
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.botao-fechar:hover,
+.botao-fechar:focus-visible {
+  box-shadow: 0 0 8px rgba(216, 164, 255, 0.6);
+}
+
+.oculto {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.overlay-entardecer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  background: radial-gradient(ellipse at 50% 15%, rgba(255, 176, 90, 0.35) 0%, rgba(255, 176, 90, 0) 45%),
+              linear-gradient(to bottom, rgba(255, 140, 70, 0.22) 0%, rgba(230, 90, 110, 0.18) 35%, rgba(90, 50, 90, 0.25) 65%, rgba(25, 15, 45, 0.45) 100%);
+  animation: respirarLuz 10s ease-in-out infinite alternate;
+}
+
+@keyframes respirarLuz {
+  0% { opacity: 0.75; }
+  100% { opacity: 1; }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-1 { animation-delay: 0.1s; }
+.fade-in-2 { animation-delay: 0.4s; }
+.fade-in-3 { animation-delay: 0.7s; }
+.fade-in-3b { animation-delay: 0.9s; }
+.fade-in-3c { animation-delay: 1.1s; }
+.fade-in-4 { animation-delay: 1.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay-entardecer,
+  .fade-in {
+    animation: none;
+    opacity: 1;
+  }
+}
