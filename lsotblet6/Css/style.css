@@ -303,7 +303,46 @@ textarea:focus-visible {
 .oculto {
   display: none;
 }
+.grade-regioes {
+  display: grid;
+  /* auto-fit + minmax: o número de colunas se ajusta sozinho
+     ao espaço disponível, sem precisar de media query */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
 
+.grade-regioes li {
+  background: var(--cor-painel-escuro);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--raio-borda-padrao);
+  padding: var(--espacamento-padrao);
+  text-align: center;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.1rem;
+  color: var(--cor-texto-claro);
+
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grade-regioes li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(216, 164, 255, 0.6);
+}
+.grade-regioes li:first-child {
+  border-color: var(--cor-destaque);
+  box-shadow: 0 0 8px rgba(216, 164, 255, 0.4);
+}
+
+.grade-regioes li:nth-child(even) {
+  background: rgba(60, 30, 80, 0.55);
+}
+
+.grade-regioes li:last-child {
+  border-style: dashed;
+}
 footer {
   text-align: center;
   font-size: 0.85rem;
