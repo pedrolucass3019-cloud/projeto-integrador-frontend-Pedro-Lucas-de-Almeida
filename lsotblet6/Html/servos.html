@@ -3,34 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clãs</title>
+    <title>Servos de Avalon Le Fae</title>
 
-    <!-- era rel="aparencia", que não é um valor válido de rel — por isso o CSS nunca carregava -->
-    <link rel="stylesheet" href="aparencia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../Css/reset.css">
+    <link rel="stylesheet" href="../Css/style.css">
 </head>
 
-<body>
+<body class="pagina-servos">
 
-    <header>
-        <a href="index.html">
-            <button>
-                <span class="button_top">Voltar</span>
-            </button>
-        </a>
-    </header>
+    <div class="conteudo">
 
-    <main>
-        <section>
-            <h2>Clãs</h2>
-            <p style="text-align: center;"> Geralmente os espiritos heroico de avalon le fae são compostos por fadas
-                de diferentes clãs sendo Wind, mirror, earth, fang etc.
-            </p>
+        <header class="topo-pagina">
+            <a href="index.html">
+                <button>
+                    <span class="button_top">Voltar</span>
+                </button>
+            </a>
+            <h1>Servos de Avalon Le Fae</h1>
+        </header>
 
-            <button>
-                <span class="button_top"> Wind </span>
-            </button>
-        </section>
-    </main>
+        <main>
+            <section aria-labelledby="titulo-quadro">
+                <h2 id="titulo-quadro">Quadro de Servos</h2>
+                <p>Principais Servos do Lostbelt 6 em Fate/Grand Order (versão NA).</p>
+
+                <div class="tabela-rolavel">
+                    <table class="quadro-servos">
+                        <caption>Informações dos Servos de Avalon Le Fae</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Imagem</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Classe</th>
+                                <th scope="col">Raridade</th>
+                                <th scope="col">ATK máx.</th>
+                                <th scope="col">HP máx.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="https://static.atlasacademy.io/JP/Servants/Status/704000/status_servant_1.png" alt="Retrato de Morgan" loading="lazy"></td>
+                                <td class="nome-servo">Morgan</td>
+                                <td>Berserker</td>
+                                <td>5★</td>
+                                <td>12.193</td>
+                                <td>12.440</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://static.atlasacademy.io/JP/Servants/Status/2800100/status_servant_1.png" alt="Retrato de Oberon" loading="lazy"></td>
+                                <td class="nome-servo">Oberon</td>
+                                <td>Pretender</td>
+                                <td>5★</td>
+                                <td>11.810</td>
+                                <td>13.266</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://static.atlasacademy.io/JP/Servants/Status/304800/status_servant_1.png" alt="Retrato de Tam Lin Lancelot (Melusine)" loading="lazy"></td>
+                                <td class="nome-servo">Tam Lin Lancelot (Melusine)</td>
+                                <td>Lancer</td>
+                                <td>5★</td>
+                                <td>12.154</td>
+                                <td>14.114</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://static.atlasacademy.io/JP/Servants/Status/504500/status_servant_1.png" alt="Retrato de Altria Caster" loading="lazy"></td>
+                                <td class="nome-servo">Altria Caster</td>
+                                <td>Caster</td>
+                                <td>5★</td>
+                                <td>10.546</td>
+                                <td>14.406</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://static.atlasacademy.io/JP/Servants/Status/105000/status_servant_1.png" alt="Retrato de Tam Lin Gawain (Barghest)" loading="lazy"></td>
+                                <td class="nome-servo">Tam Lin Gawain (Barghest)</td>
+                                <td>Saber</td>
+                                <td>4★</td>
+                                <td>8.721</td>
+                                <td>13.521</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://static.atlasacademy.io/JP/Servants/Status/204300/status_servant_1.png" alt="Retrato de Tam Lin Tristan (Baobhan Sith)" loading="lazy"></td>
+                                <td class="nome-servo">Tam Lin Tristan (Baobhan Sith)</td>
+                                <td>Archer</td>
+                                <td>4★</td>
+                                <td>9.455</td>
+                                <td>12.127</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="nota-fonte">
+                    Dados e imagens:
+                    <a href="https://apps.atlasacademy.io/db/NA/servants" target="_blank" rel="noopener noreferrer">Atlas Academy DB</a>
+                </p>
+            </section>
+
+            <section aria-labelledby="titulo-clas">
+                <h2 id="titulo-clas">Clãs</h2>
+                <p>
+                    Geralmente os espíritos heroicos de Avalon le Fae são compostos por fadas
+                    de diferentes clãs, sendo Wind, Mirror, Earth, Fang etc.
+                </p>
+            </section>
+        </main>
+
+    </div>
 
 </body>
 </html>
