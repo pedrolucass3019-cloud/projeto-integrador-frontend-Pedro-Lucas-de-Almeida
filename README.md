@@ -30,3 +30,45 @@ Favicon definido via link rel="icon". Detalhe pequeno, mas frequentemente esquec
 Preconnect para o Google Fonts antes do link da fonte. Reduz latência de DNS e TLS antes do download real do recurso.
 #CONSIDERAÇÃO FINAL:
 No geral, este é um código muito bem construído, especialmente para um projeto de fã. Dá pra perceber que houve cuidado real em várias camadas, não só na aparência visual. Além disso, atende a tudo o que o professor pediu e ensinou.
+
+CODE REVIEW ( CAIO VICTOR ):
+#VISÃOGERAL
+O projeto apresenta uma boa estrutura e uma proposta bem definida, com o objetivo de criar uma wiki informativa sobre Avalon le Fae, uma das histórias presentes em Fate/Grand Order. A página foi desenvolvida para facilitar o acesso dos jogadores às informações do universo do jogo, principalmente porque grande parte do conteúdo original está disponível em japonês.
+
+A navegação é dividida em três categorias principais: Histórias, Personagens e Regiões. Essa separação torna a experiência mais intuitiva, permitindo que o usuário encontre as informações desejadas sem precisar navegar por conteúdos desnecessários.
+
+#SEMÂNTICA HTML:
+
+A estrutura HTML apresenta uma boa organização, utilizando elementos semânticos para separar e identificar corretamente as partes da página.
+
+O uso de elementos como header, main, section, nav e footer contribui para uma estrutura mais organizada e facilita tanto a leitura do código quanto a interpretação do conteúdo pelos mecanismos de busca e tecnologias assistivas.
+
+A utilização de títulos hierarquizados também ajuda a estabelecer uma ordem lógica entre os conteúdos, tornando a página mais compreensível.
+
+Outro ponto positivo é a separação das áreas de navegação e conteúdo, evitando o uso excessivo de elementos genéricos como div quando existem elementos HTML mais adequados para representar aquela informação.
+
+#CSS E ORGANIZAÇÃO VISUAL:
+O CSS apresenta uma organização adequada, mantendo a responsabilidade pela aparência visual separada da estrutura HTML. Isso facilita futuras alterações no design sem a necessidade de modificar toda a estrutura da página.
+A estilização dos botões principais ajuda a destacar as três categorias da wiki, tornando a navegação mais intuitiva. A utilização de cores, espaçamentos e alinhamentos contribui para uma apresentação visual mais agradável e organizada.
+O uso de propriedades como max-width, margin e padding ajuda a manter o conteúdo bem distribuído, evitando que os elementos fiquem muito próximos ou desorganizados.
+
+Também é positivo o cuidado com a responsividade, utilizando recursos como media queries para adaptar a apresentação da página a diferentes tamanhos de tela, permitindo uma experiência mais consistente tanto em computadores quanto em dispositivos móveis.
+
+#ACESSIBILIDADE E USABILIDADE:
+A organização dos elementos e a identificação clara dos botões facilitam a utilização da wiki. A estrutura semântica também contribui para que leitores de tela consigam interpretar melhor as diferentes áreas da página.
+O projeto busca manter uma navegação simples, sem excesso de informações visuais, permitindo que o jogador encontre rapidamente o conteúdo que procura.
+O uso de elementos interativos com identificação adequada e estados visuais de interação também contribui para uma experiência mais acessível.
+
+#ORGANIZAÇÃO DO CONTEÚDO:
+A divisão das informações em três categorias é um dos pontos mais fortes do projeto.
+A seção de Histórias permite acompanhar os acontecimentos de Avalon le Fae e compreender melhor sua narrativa.
+A seção de Personagens reúne informações sobre os indivíduos presentes nesse universo, facilitando o conhecimento de suas características e participações na história.
+Já a seção de Regiões apresenta os diferentes territórios de Avalon le Fae, ajudando o jogador a compreender melhor a geografia e a organização desse mundo.
+Essa organização permite que o projeto seja expandido futuramente sem comprometer sua estrutura inicial.
+
+#CONSIDERAÇÃO FINAL:
+
+No geral, o projeto apresenta uma boa construção, tanto na organização do conteúdo quanto na estruturação da página. O uso de HTML semântico demonstra preocupação com a organização e a acessibilidade, enquanto o CSS contribui para uma apresentação visual agradável, organizada e adaptável a diferentes dispositivos.
+A separação entre Histórias, Personagens e Regiões atende bem à proposta principal da wiki, tornando a consulta de informações mais rápida e intuitiva.
+Além da parte técnica, o projeto possui uma finalidade interessante, pois busca solucionar uma dificuldade real enfrentada por jogadores que não compreendem o idioma japonês e desejam conhecer melhor o universo de Fate/Grand Order.
+É uma proposta bem pensada, com uma estrutura que permite futuras melhorias e expansões. No geral, é um projeto que cumpre bem seu objetivo e demonstra cuidado tanto com a experiência do usuário quanto com a organização do desenvolvimento.
